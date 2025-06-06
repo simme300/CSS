@@ -184,5 +184,30 @@ body {
 
 .main-content {
   grid-area: main;
-  background-color: #333;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.vscode-img {
+  width: 300px;
+  height: 300px;
+  color: #444444;
+  opacity: 0.4;
+  margin-bottom: 2%;
+}
+
+.commands {
+  margin: 2px;
+  /*  color: #595959; */
+  color: #737373;
+}
+
+kbd {
+  background-color: #444444;
+  padding: 0.2rem;
+  border-radius: 5px;
+  color: wheat;
 }
