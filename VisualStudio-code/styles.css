@@ -1,0 +1,188 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.optionbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 0.1rem;
+  color: white;
+  border-bottom: 1px solid #444;
+}
+
+.option-list {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+}
+
+.option-list > * {
+  margin-right: 15px;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+.option-list > *:hover,
+.searchbar-container .bi:hover {
+  background-color: #444;
+}
+
+.searchbar-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+}
+
+.searchbar-container .bi {
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+.searchbar-container > *:hover,
+.display-container > *:hover {
+  cursor: pointer;
+}
+
+.display-container > *:hover:not(.bi-dash, .bi-fullscreen-exit, .bi-x) {
+  background-color: #444;
+  box-shadow: 0 0 10px 0 #777;
+}
+
+.display-container
+  :not(
+    .bi-grid-1x2-fill,
+    .bi-layout-sidebar-inset,
+    .bi-layout-sidebar-reverse
+  ) {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  margin-left: 5px;
+}
+
+.display-container :last-child:hover {
+  background-color: hsl(360, 100%, 60%);
+  border-radius: 5px;
+}
+
+.display-container .bi-dash:hover,
+.bi-fullscreen-exit:hover {
+  background-color: #444;
+}
+
+.search-text {
+  width: 70%;
+  border-radius: 6px;
+  padding: 0.4rem;
+  height: 70%;
+  background-color: #333;
+  outline: none;
+  margin: 0;
+  border: 1px solid #555;
+}
+
+.search-text::placeholder {
+  color: wheat;
+  text-align: center;
+}
+
+.search-text:focus-visible {
+  border-color: hsl(220, 100%, 50%);
+}
+
+.search-text:hover {
+  background-color: #444;
+  border-color: #666;
+}
+
+.display-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 12%;
+}
+
+/* Main content container */
+
+.main-content-container {
+  display: grid;
+  grid-template-areas: "feature-bar explorer main";
+  grid-template-columns: 100px 300px 1fr;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
+}
+
+.feature-bar,
+.parent-container {
+  background-color: #222;
+  border-right: 1px solid #444;
+}
+
+.feature-bar {
+  grid-area: feature-bar;
+  /*  border-right: 1px solid #444; */
+}
+
+.parent-container {
+  display: flex;
+  background-color: #222;
+  flex-direction: column;
+  grid-area: explorer;
+}
+
+.explorer-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 13px;
+  color: white;
+}
+
+.editor-container,
+.project-container,
+.outline-container,
+.timeline-container {
+  position: relative;
+  color: white;
+  border-bottom: 1px solid #444;
+}
+
+.editor-container :first-child {
+  margin: 5px 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.project-container :first-child {
+  margin: 5px 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.outline-container :first-child {
+  margin: 5px 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.timeline-container :first-child {
+  margin: 5px 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.main-content {
+  grid-area: main;
+  background-color: #333;
+}
