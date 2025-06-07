@@ -9,6 +9,7 @@ body {
 }
 
 .optionbar {
+  position: relative;
   display: flex;
   justify-content: space-between;
   background-color: #222;
@@ -113,6 +114,22 @@ body {
   width: 12%;
 }
 
+.copilot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copilot-container > * {
+  margin-left: 0;
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.copilot-container:hover {
+  background-color: #444;
+}
+
 /* Main content container */
 
 .main-content-container {
@@ -120,7 +137,7 @@ body {
   grid-template-areas: "feature-bar explorer main";
   grid-template-columns: 100px 300px 1fr;
   grid-template-rows: 1fr;
-  min-height: 100vh;
+  min-height: 94vh;
 }
 
 .feature-bar,
@@ -160,26 +177,30 @@ body {
 
 .editor-container :first-child {
   margin: 5px 3px;
-  font-size: 0.8rem;
+  font-size: 0.75em;
   font-weight: bold;
 }
 
 .project-container :first-child {
   margin: 5px 3px;
-  font-size: 0.8rem;
+  font-size: 0.75em;
   font-weight: bold;
 }
 
 .outline-container :first-child {
   margin: 5px 3px;
-  font-size: 0.8rem;
+  font-size: 0.75em;
   font-weight: bold;
 }
 
 .timeline-container :first-child {
   margin: 5px 3px;
-  font-size: 0.8rem;
+  font-size: 0.75em;
   font-weight: bold;
+}
+
+.explorer-text {
+  font-size: 0.8rem;
 }
 
 .main-content {
@@ -192,22 +213,49 @@ body {
 }
 
 .vscode-img {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   color: #444444;
   opacity: 0.4;
   margin-bottom: 2%;
 }
 
-.commands {
-  margin: 2px;
-  /*  color: #595959; */
-  color: #737373;
+.command-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1fr, auto);
+  align-items: center;
 }
 
-kbd {
-  background-color: #444444;
+.commands {
+  margin: 5px 0;
+  color: #737373;
+  text-align: end;
+}
+
+div kbd {
+  background-color: #333333;
   padding: 0.2rem;
   border-radius: 5px;
-  color: wheat;
+  color: #a6a6a6;
+  margin-left: 5px;
+}
+.operator {
+  color: #a6a6a6;
+}
+
+.copilot-icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+  width: 40px;
+  padding: 0.5rem;
+}
+
+footer {
+  display: flex;
+  background-color: #222;
+  border-top: 1px solid #444;
+  align-items: center;
+  padding: 0.2rem;
+  color: white;
 }
